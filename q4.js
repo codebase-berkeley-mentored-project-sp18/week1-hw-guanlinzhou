@@ -42,7 +42,6 @@ function bind(f, obj) {
     var randomfunckey = 'xDidk';
     obj.randomfunckey = f;
     var output = obj.randomfunckey(...args);
-    delete obj.randomfunckey;
     return output;
   }
   return func
