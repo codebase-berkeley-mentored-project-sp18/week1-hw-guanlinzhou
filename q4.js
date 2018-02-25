@@ -38,8 +38,14 @@ Example 2:
 
 function bind(f, obj) {
   //================
-  obj.prototype.bar = f;
-  return obj.bar;
+  function func(...args) {
+    var randomfunckey = 'xDidk';
+    obj.randomfunckey = f;
+    var output = obj.randomfunckey(...args);
+    delete obj.randomfunckey;
+    return output;
+  }
+  return func
 }
 
   //================
