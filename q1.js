@@ -30,6 +30,13 @@ Example:
 
 function makeFilter(f, g, h) {
   //================
-  // YOUR CODE HERE
+  function p(x) {
+    if (f(x) && g(x)) {
+      return h(x);
+    } else {
+      return x;
+    }
+  }
   //================
+  return p;
 }

@@ -38,6 +38,8 @@ Example 2:
 
 function bind(f, obj) {
   //================
-  // YOUR CODE HERE
-  //================
+  obj.prototype.bar = f;
+  return obj.bar;
 }
+
+  //================

@@ -16,6 +16,14 @@ Example:
 */
 function censorBadWords(inputStr, badWords) {
   //================
-  // YOUR CODE HERE
+  for (var i = 0; i < badWords.length; i++) {
+    while (inputStr.includes(" " + badWords[i])){
+      inputStr = inputStr.replace(" " + badWords[i], " *CENSORED*");
+    }
+    while (inputStr.includes(badWords[i] + " ")){
+      inputStr = inputStr.replace(badWords[i] + " ", "*CENSORED* ");
+    }
+  }
+  return inputStr;
   //================
 }
